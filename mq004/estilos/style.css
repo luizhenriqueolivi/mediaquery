@@ -13,7 +13,7 @@ html {
     height: 100vh;
 }
 h1 {
-    color: white;
+    color: darkgray;
     text-align: center;
     font-size: 2em;
     text-shadow: 2px 2px 2px black;

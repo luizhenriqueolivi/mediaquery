@@ -2,3 +2,75 @@
 
 /* Todas as demais mídias */
 
+/* Tipical Device Breakpoints 
+    * Pequenas Telas: de 0 a 600px; 
+    * Celular: de 600 a 768px;
+    * Tablet: de 768 a 992px;
+    * Desktop: 992 a 1200px;
+    * Grandes Telas: acima de 1200px.  
+*/
+@media print {  /* Impressora */
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    body {
+        background-image: url(../imagens/back-print.jpg); /* Desnecessário */        
+    }
+    main {
+        border:  2px solid black;
+        width: 90vw;
+    }
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+    main::after {
+        content: 'Feito por Luiz Olivi pelo site: www.cursoemvideo.com.br';
+        text-decoration: overline;
+    }
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: block;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){ /* Tablet */
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    img#phone {display: none;}
+    img#tablet {display: block;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px){ /* Desktop */
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: block;}
+    img#tv {display: none;}
+
+}
+
+@media screen and (min-width: 1200px) {  /* Grandes telas */
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+    main {
+        width: 800px;
+    }
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: block;}
+
+}
